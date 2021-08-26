@@ -20,6 +20,43 @@
          * 3 - abc1324
          * 4 - az111W
          */
-        public static bool CheckInput(string input) { }
+        public static bool CheckInput(string input) {
+            int maiusculas = 0, minusculas = 0, numeros = 0;
+
+            if (input.Length != 8)
+            {
+                return false;
+            }
+            else
+            {
+                for (int i = 0; i < input.Length; i++)
+                {
+                    if (char.IsUpper(input[i]))
+                    {
+                        maiusculas++;
+                    }
+                    else if (char.IsLower(input[i]))
+                    {
+                        minusculas++;
+                    }
+                    else if (char.IsNumber(input[i]) && input[i] > 0 && input[i] < 9)
+                    {
+                        numeros++;
+                    }
+                    else { return false; }
+                }
+
+                if (maiusculas != 3 || minusculas != 1 || numeros != 4)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+
+        }
+    }
     }
 }
