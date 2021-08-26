@@ -37,8 +37,8 @@ namespace Tasks
 
 
             decimalList.Add(Convert.ToDecimal(positivos / numbers.Count));
-            decimalList.Add(negativos/numbers.Count);
-            decimalList.Add(zeros/numbers.Count);
+            decimalList.Add(Convert.ToDecimal(negativos /numbers.Count));
+            decimalList.Add(Convert.ToDecimal(zeros /numbers.Count));
            
             return decimalList;
         }
