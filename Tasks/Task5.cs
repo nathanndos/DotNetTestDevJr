@@ -7,14 +7,14 @@
          *Caso o número seja 0 (zero), retorne "zero"
          */
         public static string GetEvenOrOdd(int number) {
-            if (number %2 ==0) {
-                return "Par";
+            if (number %2 ==0&&number!=0) {
+                return "par";
             }else if (number % 2 != 0) {
-                return "Impar";
+                return "impar";
             }
             else
             {
-                return "Zero";
+                return "zero";
             }
         }
     }
