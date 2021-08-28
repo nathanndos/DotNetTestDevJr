@@ -20,26 +20,32 @@ namespace Tasks
 
             List<decimal> decimalList = new List<decimal>();
 
-            int positivos = 0, negativos = 0, zeros = 0;
+            decimal positivos = 0, negativos = 0, zeros = 0;
 
             for (int i = 0; i < numbers.Count; i++)
             {
-                if (numbers[i] == 0) {
+                if (numbers[i] == 0)
+                {
                     zeros++;
                 }
-                else if(numbers[i] > 0){
+                else if (numbers[i] > 0)
+                {
                     positivos++;
                 }
-                else{
+                else
+                {
                     negativos++;
                 }
             }
+   
+            positivos = Math.Round(positivos / numbers.Count, 6);
+            negativos = Math.Round(negativos / numbers.Count, 6);
+            zeros = Math.Round(zeros / numbers.Count, 6);
 
+            decimalList.Add(positivos);
+            decimalList.Add(negativos);
+            decimalList.Add(zeros);
 
-            decimalList.Add(Convert.ToDecimal(positivos / numbers.Count));
-            decimalList.Add(Convert.ToDecimal(negativos /numbers.Count));
-            decimalList.Add(Convert.ToDecimal(zeros /numbers.Count));
-           
             return decimalList;
         }
     }

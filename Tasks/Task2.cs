@@ -29,7 +29,7 @@
             }
             else
             {
-                for (int i = 0; i < input.Length; i++)
+                for (int i = 0; i < input.Length; i++)//ABC1239a
                 {
                     if (char.IsUpper(input[i]))
                     {
@@ -39,7 +39,7 @@
                     {
                         minusculas++;
                     }
-                    else if (char.IsNumber(input[i]) && input[i] > 0 && input[i] < 9)
+                    else if (char.IsNumber(input[i]))
                     {
                         numeros++;
                     }
